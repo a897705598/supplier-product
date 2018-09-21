@@ -1,0 +1,42 @@
+{
+    "name": "jxc/supplier-product",
+    "description": "jxc supplier product mapping module",
+    "type": "library",
+    "authors": [
+        {
+            "name": "MrGuin",
+            "email": "mrguin33@qq.com"
+        }
+    ],
+    "require": {
+        "jxc/supplier": "^0.0.3",
+        "jxc/product": "^0.0.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jxc\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jxc\\Provider\\JxcSupplierProductProvider"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/3930615/php-packages-structured-response.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/a897705598/supplier.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/a897705598/product.git"
+        }
+    ]
+}
