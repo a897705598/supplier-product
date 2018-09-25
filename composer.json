@@ -1,6 +1,6 @@
 {
-    "name": "jxc/supplier-product",
-    "description": "jxc supplier product mapping module",
+    "name": "ares/supplier-product",
+    "description": "ares supplier product mapping module",
     "type": "library",
     "authors": [
         {
@@ -9,19 +9,19 @@
         }
     ],
     "require": {
-        "jxc/supplier": "^0.0.3",
-        "jxc/product": "^0.0.3"
+        "ares/supplier": "^0.1.1",
+        "ares/product": "^0.1.2"
     },
     "autoload": {
         "psr-4": {
-            "Jxc\\": "src/"
+            "Ares\\": "src/"
         }
     },
     "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [
-                "Jxc\\Provider\\JxcSupplierProductProvider"
+                "Ares\\Provider\\AresSupplierProductProvider"
             ]
         }
     },

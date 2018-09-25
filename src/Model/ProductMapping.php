@@ -1,13 +1,13 @@
 <?php
 
-namespace Jxc\Model\Basic;
+namespace App\Model\Ares;
 
-use Jxc\Model\Basic\Product;
+use App\Model\Ares\Product;
 
 class ProductMapping extends Product
 {
     public function suppliers()
     {
-        return $this->belongsToMany('Jxc\Model\Basic\SupplierMapping', 'supplier_product', 'product_id', 'supplier_id');
+        return $this->belongsToMany('App\Model\Ares\SupplierMapping', 'supplier_product', 'product_id', 'supplier_id');
     }
 }

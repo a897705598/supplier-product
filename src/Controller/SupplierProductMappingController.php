@@ -1,14 +1,14 @@
 <?php
 
-namespace Jxc\Controller;
+namespace App\Http\Controllers\Ares;
 
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Jxc\Model\Basic\SupplierMapping;
-use Jxc\Model\Basic\ProductMapping;
+use App\Model\Ares\SupplierMapping;
+use App\Model\Ares\ProductMapping;
 use App\Traits\ApiValidator;
 use StructuredResponse\StructuredResponse;
 
@@ -21,14 +21,14 @@ class SupplierProductMappingController extends Controller
     {
         $products = ProductMapping::with('suppliers')->get();
         Log::info($products);
-        return view('product.productList')->with('products', $products);
+        return view('ares.basic.product.productList')->with('products', $products);
     }
 
     public function supplierList()
     {
         $suppliers = SupplierMapping::with('products')->get();
         Log::info($suppliers);
-        return view('supplier.supplierList')->with('suppliers', $suppliers);
+        return view('ares.basic.supplier.supplierList')->with('suppliers', $suppliers);
     }
 
     public function getSuppliers(Request $request)
